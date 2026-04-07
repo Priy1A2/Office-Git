@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OfficeGit</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <div class="popup-header">
+      <div class="logo">
+        <svg width="20" height="20" viewBox="0 0 28 28" fill="none">
+          <rect width="28" height="28" rx="6" fill="#2563eb" />
+          <path d="M8 14l4 4 8-8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span>OfficeGit</span>
+      </div>
+      <button id="settingsBtn" class="icon-btn" title="Settings">⚙️</button>
+    </div>
+
+    <!-- Not Connected State -->
+    <div id="notConnected" class="state-panel" style="display: none;">
+      <div class="empty-state">
+        <p>Not connected to OfficeGit server</p>
+        <button id="openSettingsBtn" class="btn btn-primary">Configure Settings</button>
+      </div>
+    </div>
+
+    <!-- Connected State - Upload Form -->
+    <div id="uploadForm" class="state-panel" style="display: none;">
+      <div class="form-group">
+        <label for="docTitle">Document Title</label>
+        <input type="text" id="docTitle" placeholder="Enter document title" />
+      </div>
+
+      <div class="form-group">
+        <label for="commitMessage">Commit Message</label>
+        <input type="text" id="commitMessage" placeholder="Initial version" value="Initial version" />
+      </div>
+
+      <div class="form-group">
+        <label>File (.txt or .pdf)</label>
+        <div id="dropZone" class="drop-zone">
+          <span id="dropZoneText">Click or drag to upload</span>
+          <span id="dropZoneInfo" class="drop-zone-info">Max 1MB · .txt or .pdf</span>
+          <input type="file" id="fileInput" accept=".txt,.pdf" />
+        </div>
+      </div>
+
+      <div id="selectedFile" class="selected-file" style="display: none;">
+        <span id="fileName"></span>
+        <button id="removeFile" class="icon-btn">✕</button>
+      </div>
+
+      <button id="uploadBtn" class="btn btn-primary btn-full" disabled>
+        Upload Document
+      </button>
+
+      <div id="statusMessage" class="status-message" style="display: none;"></div>
+    </div>
+
+    <!-- User Info -->
+    <div id="userInfo" class="user-info" style="display: none;">
+      <span id="userName"></span>
+      <button id="logoutBtn" class="btn-text">Logout</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

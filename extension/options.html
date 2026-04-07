@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OfficeGit Settings</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', -apple-system, sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 32px;
+      width: 400px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+
+    h1 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      color: #64748b;
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      color: #94a3b8;
+      margin-bottom: 6px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 14px;
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    input:focus {
+      border-color: #2563eb;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-top: 8px;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .btn-primary:hover:not(:disabled) {
+      background: #1d4ed8;
+    }
+
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .status {
+      margin-top: 16px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      text-align: center;
+      display: none;
+    }
+
+    .status.success {
+      display: block;
+      background: #16a34a20;
+      color: #4ade80;
+      border: 1px solid #16a34a30;
+    }
+
+    .status.error {
+      display: block;
+      background: #dc262620;
+      color: #f87171;
+      border: 1px solid #dc262630;
+    }
+
+    .connected-info {
+      margin-top: 16px;
+      padding: 12px;
+      background: #16a34a10;
+      border: 1px solid #16a34a20;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #4ade80;
+      display: none;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #334155;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>⚙️ OfficeGit Settings</h1>
+    <p class="subtitle">Connect to your OfficeGit server</p>
+
+    <div class="form-group">
+      <label for="serverUrl">Server URL</label>
+      <input type="url" id="serverUrl" placeholder="http://localhost:5000" />
+    </div>
+
+    <hr class="divider" />
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="you@example.com" />
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="••••••••" />
+    </div>
+
+    <button id="loginBtn" class="btn btn-primary">Connect & Login</button>
+
+    <div id="status" class="status"></div>
+    <div id="connectedInfo" class="connected-info"></div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
