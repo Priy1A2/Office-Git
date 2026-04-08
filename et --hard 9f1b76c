@@ -1,0 +1,17 @@
+[33m38a3223[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: reset: moving to origin/main
+[33m9f1b76c[m HEAD@{1}: rebase (abort): returning to refs/heads/main
+[33m9f1b76c[m HEAD@{2}: rebase (abort): returning to refs/heads/main
+[33m7c7ca36[m HEAD@{3}: rebase (pick): removed database files from repo
+[33mbfcf8a0[m HEAD@{4}: rebase (pick): Fixed api url
+[33m9f1b76c[m HEAD@{5}: reset: moving to 9f1b76c1a3169bd48888f76c7305230c52ebbe6a
+[33m9f1b76c[m HEAD@{6}: checkout: moving from 38a32230ee57350781550467ad698bddeb731dfa to main
+[33m38a3223[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{7}: pull origin main --rebase (start): checkout 38a32230ee57350781550467ad698bddeb731dfa
+[33m9f1b76c[m HEAD@{8}: rebase (abort): returning to refs/heads/main
+[33m9f1b76c[m HEAD@{9}: rebase (abort): returning to refs/heads/main
+[33m9f1b76c[m HEAD@{10}: checkout: moving from 38a32230ee57350781550467ad698bddeb731dfa to main
+[33m38a3223[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{11}: pull origin main --rebase (start): checkout 38a32230ee57350781550467ad698bddeb731dfa
+[33m9f1b76c[m HEAD@{12}: commit: removed database files from repo
+[33m5311189[m HEAD@{13}: commit: Fixed api url
+[33m9cc4596[m HEAD@{14}: commit: update
+[33m7f9e70b[m HEAD@{15}: Branch: renamed refs/heads/main to refs/heads/main
+[33m7f9e70b[m HEAD@{17}: commit (initial): Office git initial commit
