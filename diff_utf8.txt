@@ -1,0 +1,45 @@
+﻿diff --git a/client/.env.example b/client/.env.example
+index 1cb80c5..a2f6b8c 100644
+--- a/client/.env.example
++++ b/client/.env.example
+@@ -1,5 +1,5 @@
+ # API URL (backend)
+-VITE_API_URL=http://localhost:5000/api
++VITE_API_URL=https://office-git-backend.onrender.com/api
+ 
+ # Firebase (required for Google OAuth)
+ VITE_FIREBASE_API_KEY=your_firebase_api_key
+diff --git a/client/.gitignore b/client/.gitignore
+index a547bf3..a4bfc44 100644
+--- a/client/.gitignore
++++ b/client/.gitignore
+@@ -12,6 +12,17 @@ dist
+ dist-ssr
+ *.local
+ 
++# Database files
++server/data/db/
++data/
++*.db
++*.sqlite
++
++# Environment variables
++.env
++.env.local
++.env.*
++
+ # Editor directories and files
+ .vscode/*
+ !.vscode/extensions.json
+diff --git a/client/src/services/api.js b/client/src/services/api.js
+index ed910fe..d38a8f3 100644
+--- a/client/src/services/api.js
++++ b/client/src/services/api.js
+@@ -1,6 +1,6 @@
+ import axios from 'axios';
+ 
+-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
++const API_BASE = import.meta.env.VITE_API_URL || 'https://office-git-backend.onrender.com/api';
+ 
+ const api = axios.create({
+   baseURL: API_BASE,
