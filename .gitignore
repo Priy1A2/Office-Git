@@ -1,4 +1,12 @@
 node_modules/
 .env
-*.log
 dist/
+
+# Logs
+*.log
+
+# Database
+server/data/db/
+
+# Temp/debug files
+*.txt
