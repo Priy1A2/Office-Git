@@ -73,6 +73,7 @@ const LoginPage = () => {
                   className="w-full px-4 py-2.5 bg-[#0f172a] border border-[#334155] rounded-lg text-white text-sm focus:border-blue-500 focus:outline-none transition-colors"
                   placeholder="John Doe"
                   required
+                  autoComplete="name"
                 />
               </div>
             )}
@@ -86,6 +87,7 @@ const LoginPage = () => {
                 className="w-full px-4 py-2.5 bg-[#0f172a] border border-[#334155] rounded-lg text-white text-sm focus:border-blue-500 focus:outline-none transition-colors"
                 placeholder="you@example.com"
                 required
+                autoComplete="username"
               />
             </div>
 
@@ -99,6 +101,7 @@ const LoginPage = () => {
                 placeholder="••••••••"
                 required
                 minLength={6}
+                autoComplete={isRegister ? "new-password" : "current-password"}
               />
             </div>
 
